@@ -281,7 +281,8 @@
   
   /* Make table scrollable on mobile */
   .configurations-table-container {
-    overflow-x: auto;
+           width: 91vw;
+        overflow-x: scroll;
   }
   
   .configurations-table {

@@ -3,53 +3,51 @@ import './Amenities.css';
 
 const Amenities = () => {
   const amenities = [
-    { name: 'Ganesha Temple', icon: '🛕' },
-    { name: 'Reflexology Path', icon: '🦶' },
-    { name: 'Guest Room', icon: '🏨' },
-    { name: 'Library', icon: '📚' },
-    { name: 'Wellness Lawn', icon: '🌿' },
-    { name: 'Cove seating', icon: '💺' },
-    { name: 'Pool With Jacuzzi', icon: '🏊' },
-    { name: 'Net Cricket (4 x 25 mt)', icon: '🏏' },
-    { name: 'Open Café', icon: '☕' },
-    { name: 'Kids Play Area', icon: '🧒' },
-    { name: 'Experiential Walk', icon: '🚶' },
-    { name: 'Amphi seating on mound', icon: '🎭' },
-    { name: 'Elevated Jogging Track', icon: '🏃' },
-    { name: 'Event lawn', icon: '🎪' },
-    { name: 'BBQ Plaza', icon: '🔥' }
+    'Ganesha Temple',
+    'Reflexology Path', 
+    'Guest Room',
+    'Library',
+    'Wellness Lawn',
+    'Cove seating',
+    'Pool With Jacuzzi',
+    'Net Cricket (4 x 25 mt)',
+    'Open Café',
+    'Kids Play Area',
+    'Experiential Walk',
+    'Amphi seating on mound',
+    'Elevated Jogging Track',
+    'Event lawn',
+    'BBQ Plaza'
   ];
 
   return (
-    <section className="amenities-section">
+    <section id="amenities" className="amenities-section">
       <div className="amenities-container">
-        {/* Header */}
+        {/* Section Header */}
         <div className="amenities-header">
           <h2 className="amenities-title">
-            The Akhand - Lifestyle Amenities
+            The Akhand - <span className="text-gold">Lifestyle Amenities</span>
           </h2>
-          <div className="title-underline"></div>
-          <p className="amenities-subtitle">
-            Experience unparalleled luxury with our world-class amenities designed for your comfort and lifestyle
-          </p>
         </div>
 
-        {/* Amenities Grid */}
-        <div className="amenities-grid">
+        {/* Premium Amenities Grid */}
+        <div className="amenities-premium-grid">
           {amenities.map((amenity, index) => (
-            <div key={index} className="amenity-card">
-              <div className="amenity-icon">{amenity.icon}</div>
-              <div className="amenity-name">{amenity.name}</div>
+            <div key={index} className="amenity-card-premium">
+              <div className="amenity-gold-bar"></div>
+              <div className="amenity-content">
+                <span className="amenity-icon">◆</span>
+                <span className="amenity-name">{amenity}</span>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="amenities-cta">
-          <button className="view-all-btn">
-            <span className="btn-dots">......</span>
-            View 30+ Amenities
-            <span className="btn-arrow">→</span>
+        {/* View More Button */}
+        <div className="view-more-premium">
+          <button className="view-more-btn-premium">
+            ......View 30+ Amenities
+            <span className="btn-glow"></span>
           </button>
         </div>
       </div>

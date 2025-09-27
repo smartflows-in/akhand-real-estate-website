@@ -1,0 +1,247 @@
+/* Amenities Section - Premium Version */
+.amenities-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%);
+  position: relative;
+}
+
+.amenities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header Styles */
+.amenities-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.amenities-title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #181D24;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  display: inline-block;
+}
+
+.amenities-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #D4AF37, #181D24);
+  border-radius: 2px;
+}
+
+/* Premium Amenities Grid */
+.amenities-premium-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.amenity-card-premium {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #F0F0F0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.amenity-gold-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #D4AF37, #F4D03F);
+  transition: all 0.3s ease;
+}
+
+.amenity-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.amenity-icon {
+  color: #D4AF37;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.amenity-name {
+  font-size: 1.05rem;
+  color: #181D24;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Premium Hover Effects */
+.amenity-card-premium:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.amenity-card-premium:hover .amenity-gold-bar {
+  width: 6px;
+  background: linear-gradient(180deg, #F4D03F, #D4AF37);
+}
+
+.amenity-card-premium:hover .amenity-icon {
+  transform: scale(1.2);
+  color: #181D24;
+}
+
+.amenity-card-premium:hover .amenity-name {
+  color: #D4AF37;
+  font-weight: 600;
+}
+
+/* View More Button - Premium */
+.view-more-premium {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-more-btn-premium {
+  position: relative;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #181D24 0%, #2D3748 100%);
+  border: 2px solid #181D24;
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(212, 175, 55, 0.4), 
+    transparent);
+  transition: left 0.6s ease;
+}
+
+.view-more-btn-premium:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+  border-color: #D4AF37;
+}
+
+.view-more-btn-premium:hover .btn-glow {
+  left: 100%;
+}
+
+.view-more-btn-premium:hover {
+  background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+  color: #181D24;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .amenities-section {
+    padding: 3rem 0;
+  }
+  
+  .amenities-container {
+    padding: 0 1.5rem;
+  }
+  
+  .amenities-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .amenities-premium-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .amenity-card-premium {
+    padding: 1.2rem;
+  }
+  
+  .amenity-content {
+    gap: 0.8rem;
+  }
+  
+  .amenity-name {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .amenities-container {
+    padding: 0 1rem;
+  }
+  
+  .amenities-title {
+    font-size: 1.8rem;
+  }
+  
+  .amenity-card-premium {
+    padding: 1rem;
+  }
+  
+  .amenity-content {
+    gap: 0.6rem;
+  }
+  
+  .amenity-icon {
+    font-size: 1rem;
+  }
+  
+  .amenity-name {
+    font-size: 0.95rem;
+  }
+  
+  .view-more-btn-premium {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.amenity-card-premium {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.amenity-card-premium:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.amenity-card-premium:nth-child(even) {
+  animation-delay: 0.2s;
+}
