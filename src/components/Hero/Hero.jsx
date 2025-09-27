@@ -7,6 +7,7 @@ import './Hero.css';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Hero = () => {
   // Custom SVG Arrow Components
@@ -64,6 +65,10 @@ const Hero = () => {
           nextEl: '.hero-button-next',
           prevEl: '.hero-button-prev',
         }}
+        pagination={{
+          el: '.hero-pagination',
+          clickable: true,
+        }}
         loop={true}
         className="hero-swiper"
       >
@@ -73,13 +78,13 @@ const Hero = () => {
               className="hero-slide"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="slide-overlay"></div>
-              <div className="slide-content">
+              <div className="hero-slide-overlay"></div>
+              <div className="hero-slide-content">
                 <h1 className="hero-title">{slide.title}</h1>
                 <p className="hero-subtitle">{slide.subtitle}</p>
                 <div className="hero-cta">
-                  <button className="cta-btn primary">Explore Now</button>
-                  <button className="cta-btn secondary">View Gallery</button>
+                  <button className="hero-cta-btn hero-cta-btn-primary">Explore Now</button>
+                  <button className="hero-cta-btn hero-cta-btn-secondary">View Gallery</button>
                 </div>
               </div>
             </div>

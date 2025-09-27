@@ -1,0 +1,337 @@
+.contact-section {
+  padding: 6rem 0 2rem 0;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 50%, #FFFFFF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #D4AF37;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #181D24;
+  margin-bottom: 1.5rem;
+}
+
+.contact-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #D4AF37, #181D24);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.contact-form-container {
+  position: relative;
+}
+
+.contact-form {
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 25px 70px rgba(24, 29, 36, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  position: relative;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #D4AF37, #181D24, #D4AF37);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-form:hover::before {
+  opacity: 0.3;
+}
+
+.contact-form-group {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.contact-form-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #181D24;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-input {
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgba(24, 29, 36, 0.2);
+  font-size: 1.1rem;
+  color: #181D24;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-form-input:focus {
+  outline: none;
+  border-bottom-color: #D4AF37;
+}
+
+.contact-form-input:focus + .contact-input-underline {
+  transform: scaleX(1);
+}
+
+.contact-input-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37, #181D24);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.contact-submit-btn {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: #181D24;
+  border: none;
+  border-radius: 50px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.contact-btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-btn-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #D4AF37, #181D24);
+  transition: left 0.3s ease;
+  border-radius: 50px;
+}
+
+.contact-submit-btn:hover .contact-btn-overlay {
+  left: 0;
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+}
+
+.contact-disclaimer {
+margin-bottom: 6vh;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 10px;
+  border-left: 3px solid #D4AF37;
+}
+
+.contact-disclaimer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #181D24;
+  margin: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contact-info-card {
+  background: #FFFFFF;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(24, 29, 36, 0.1);
+  position: relative;
+}
+
+.contact-card-header {
+  height: 4px;
+  background: linear-gradient(90deg, #D4AF37, #181D24);
+}
+
+.contact-info-content {
+  padding: 2.5rem;
+}
+
+.contact-info-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #181D24;
+  margin-bottom: 1rem;
+}
+
+.contact-info-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #181D24;
+  margin-bottom: 1rem;
+}
+
+.contact-official-link {
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  word-break: break-all;
+}
+
+.contact-official-link:hover {
+  color: #181D24;
+  text-decoration: underline;
+}
+
+.contact-gold-accent {
+  width: 40px;
+  height: 2px;
+  background: #D4AF37;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+}
+
+.contact-copyright {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(24, 29, 36, 0.1);
+}
+
+.contact-copyright p {
+  font-size: 0.9rem;
+  color: #181D24;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 968px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .contact-info {
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 0 2rem 0;
+  }
+  
+  .contact-form {
+    padding: 2rem;
+  }
+  
+  .contact-info-content {
+    padding: 2rem;
+  }
+  
+  .contact-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-container {
+    padding: 0 1rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .contact-info-content {
+    padding: 1.5rem;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+@keyframes contact-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-section {
+  animation: contact-fadeInUp 0.8s ease-out;
+}
+
+.contact-form-input:focus ~ .contact-form-label {
+  color: #D4AF37;
+}

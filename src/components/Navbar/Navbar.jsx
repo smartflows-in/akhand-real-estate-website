@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="nav-container">
           {/* Logo */}
           <div className="nav-logo">
-            <span className="logo-text">LUXURY</span>
+            <span className="logo-text">Akhand</span>
           </div>
 
           {/* Navigation Items */}
