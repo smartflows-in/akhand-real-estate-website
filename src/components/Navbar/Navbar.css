@@ -1,0 +1,378 @@
+/* Navbar Container */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(24, 29, 36, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logo */
+.nav-logo .logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #181D24 0%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #181D24;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #D4AF37;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.brochure-btn {
+  background: linear-gradient(135deg, #181D24 0%, #2D3748 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.brochure-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.brochure-btn:hover::before {
+  left: 100%;
+}
+
+.brochure-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 2px;
+  background: #181D24;
+  transition: all 0.3s ease;
+}
+
+.line-1-active {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.line-2-active {
+  opacity: 0;
+}
+
+.line-3-active {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Fixed Mobile Brochure Button */
+.mobile-fixed-brochure {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  padding-left: 10px;
+}
+
+.vertical-brochure-btn {
+  background: linear-gradient(135deg, #181D24 0%, #2D3748 100%);
+  color: white;
+  border: none;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 30px 12px;
+  border-radius: 0 50px 50px 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(24, 29, 36, 0.3);
+}
+
+.vertical-brochure-btn::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: top 0.5s ease;
+}
+
+.vertical-brochure-btn:hover::before {
+  top: 100%;
+}
+
+.vertical-brochure-btn:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 35px rgba(212, 175, 55, 0.4);
+}
+
+.btn-text {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+/* Fixed Bottom Mobile Actions */
+.mobile-bottom-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(24, 29, 36, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 998;
+  box-shadow: 0 -5px 30px rgba(24, 29, 36, 0.1);
+}
+
+.bottom-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 33.333%;
+}
+
+.bottom-action-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+.action-icon {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+  transition: transform 0.3s ease;
+}
+
+.bottom-action-btn:hover .action-icon {
+  transform: scale(1.2);
+}
+
+.action-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #181D24;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Call Us Button Specific */
+.bottom-action-btn:nth-child(1):hover .action-icon {
+  color: #D4AF37;
+}
+
+/* Enquiry Now Button Specific */
+.bottom-action-btn:nth-child(2):hover .action-icon {
+  color: #D4AF37;
+}
+
+/* WhatsApp Button Specific */
+.bottom-action-btn:nth-child(3):hover .action-icon {
+  color: #25D366;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+  
+  .nav-menu {
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile-fixed-brochure,
+  .mobile-bottom-actions {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(24, 29, 36, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu-active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-container {
+    height: 70px;
+  }
+
+  /* Show mobile fixed elements */
+  .mobile-fixed-brochure,
+  .mobile-bottom-actions {
+    display: flex;
+  }
+
+  /* Adjust main content for bottom actions */
+  .main-content {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-logo .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .brochure-btn {
+    padding: 10px 25px;
+    font-size: 0.8rem;
+  }
+
+  .vertical-brochure-btn {
+    padding: 25px 10px;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .mobile-bottom-actions {
+    padding: 8px 0;
+  }
+
+  .bottom-action-btn {
+    padding: 6px 8px;
+  }
+
+  .action-icon {
+    font-size: 1.1rem;
+  }
+
+  .action-label {
+    font-size: 0.65rem;
+  }
+}
+
+/* Scroll Effect */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 5px 30px rgba(24, 29, 36, 0.1);
+}
