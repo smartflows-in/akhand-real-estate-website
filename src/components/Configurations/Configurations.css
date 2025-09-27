@@ -1,0 +1,339 @@
+/* Configurations Section */
+.configurations-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  position: relative;
+}
+
+.configurations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.configurations-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.configurations-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #181D24;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.title-underline {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #D4AF37, #B8860B);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Table Container */
+.configurations-table-container {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(24, 29, 36, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+}
+
+.configurations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+/* Table Header */
+.table-header {
+  background: linear-gradient(135deg, #181D24 0%, #2D3748 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.table-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.table-header:hover::before {
+  left: 100%;
+}
+
+.table-header:first-child {
+  border-radius: 15px 0 0 15px;
+}
+
+.table-header:last-child {
+  border-radius: 0 15px 15px 0;
+}
+
+/* Table Rows */
+.table-row {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(24, 29, 36, 0.1);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background: rgba(212, 175, 55, 0.05);
+  transform: translateY(-2px);
+}
+
+.table-data {
+  padding: 25px 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #181D24;
+  transition: all 0.3s ease;
+}
+
+/* Type Cell */
+.type-cell {
+  font-weight: 600;
+}
+
+.type-badge {
+  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  min-width: 80px;
+}
+
+/* Area Cell */
+.area-cell {
+  font-weight: 500;
+  color: #181D24;
+  font-size: 1rem;
+}
+
+/* Price Cell */
+.price-cell {
+  font-weight: 700;
+}
+
+.price-amount {
+  background: linear-gradient(135deg, #181D24 0%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Breakup Cell */
+.breakup-cell {
+  padding: 20px;
+}
+
+.request-btn {
+  background: linear-gradient(135deg, #181D24 0%, #2D3748 100%);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.request-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.request-btn:hover::before {
+  left: 100%;
+}
+
+.request-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Table Footer */
+.table-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(24, 29, 36, 0.1);
+}
+
+.footer-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .configurations-table-container {
+    padding: 30px;
+  }
+  
+  .table-data {
+    padding: 20px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .configurations-section {
+    padding: 80px 0;
+  }
+  
+  .configurations-container {
+    padding: 0 1.5rem;
+  }
+  
+  .configurations-header {
+    margin-bottom: 40px;
+  }
+  
+  .configurations-table-container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .table-header {
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .table-data {
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .type-badge {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+    min-width: 70px;
+  }
+  
+  .price-amount {
+    font-size: 1rem;
+  }
+  
+  .request-btn {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .configurations-section {
+    padding: 60px 0;
+  }
+  
+  .configurations-container {
+    padding: 0 1rem;
+  }
+  
+  .configurations-table-container {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  /* Make table scrollable on mobile */
+  .configurations-table-container {
+    overflow-x: auto;
+  }
+  
+  .configurations-table {
+    min-width: 500px;
+  }
+  
+  .table-header {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .table-data {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .type-badge {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    min-width: 60px;
+  }
+  
+  .request-btn {
+    padding: 6px 15px;
+    font-size: 0.75rem;
+    min-width: 80px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.configurations-title,
+.configurations-table,
+.table-footer {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.table-row {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.table-row:nth-child(1) { animation-delay: 0.1s; }
+.table-row:nth-child(2) { animation-delay: 0.2s; }
+.table-row:nth-child(3) { animation-delay: 0.3s; }
+.table-row:nth-child(4) { animation-delay: 0.4s; }
