@@ -1,0 +1,104 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, EffectFade } from 'swiper/modules';
+import './Hero.css';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+
+const Hero = () => {
+  // Custom SVG Arrow Components
+  const LeftArrow = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+
+  const RightArrow = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+
+  // Sample images - replace with your actual images
+  const heroImages = [
+    {
+      id: 1,
+      image: '/assets/images/hero1.jpg',
+      title: 'Luxury Living Redefined',
+      subtitle: 'Experience unparalleled elegance and sophistication'
+    },
+    {
+      id: 2,
+      image: '/assets/images/hero2.jpg',
+      title: 'Premium Residences',
+      subtitle: 'Where luxury meets contemporary design'
+    },
+    {
+      id: 3,
+      image: '/assets/images/hero3.jpg',
+      title: 'Exclusive Lifestyle',
+      subtitle: 'Discover your dream home in paradise'
+    },
+    {
+      id: 4,
+      image: '/assets/images/hero4.jpg',
+      title: 'Architectural Marvel',
+      subtitle: 'Masterpiece of modern architecture'
+    }
+  ];
+
+  return (
+    <section className="hero-section">
+      <Swiper
+        modules={[Autoplay, Navigation, EffectFade]}
+        effect="fade"
+        speed={1000}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        navigation={{
+          nextEl: '.hero-button-next',
+          prevEl: '.hero-button-prev',
+        }}
+        loop={true}
+        className="hero-swiper"
+      >
+        {heroImages.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div 
+              className="hero-slide"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
+              <div className="slide-overlay"></div>
+              <div className="slide-content">
+                <h1 className="hero-title">{slide.title}</h1>
+                <p className="hero-subtitle">{slide.subtitle}</p>
+                <div className="hero-cta">
+                  <button className="cta-btn primary">Explore Now</button>
+                  <button className="cta-btn secondary">View Gallery</button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+
+        {/* Custom Navigation Buttons with SVG */}
+        <div className="hero-button-prev">
+          <LeftArrow />
+        </div>
+        <div className="hero-button-next">
+          <RightArrow />
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="hero-pagination"></div>
+      </Swiper>
+    </section>
+  );
+};
+
+export default Hero;

@@ -6,11 +6,16 @@
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: #181D24;
   background: #FFFFFF;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
 }
 
 /* Smooth Scrolling */
@@ -170,4 +175,29 @@ h3 {
     margin-bottom: 70px; /* Space for bottom actions */
     min-height: calc(100vh - 140px); /* Adjust for top nav + bottom actions */
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add this to your existing App.css */
+.main-content {
+  margin-top: 0; /* Remove top margin since hero handles it */
+}
+
+/* Ensure smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
