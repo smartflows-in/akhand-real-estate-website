@@ -1,38 +1,46 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
 import './Testimonials.css';
- import video from '../../assets/verticalvideo.mp4';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
+
+// Import your videos - make sure these paths are correct
+import video1 from '../../assets/verticalvideo.mp4';
+import video2 from '../../assets/verticalvideo.mp4'; // You'll need different video files
+import video3 from '../../assets/verticalvideo.mp4';
+import video4 from '../../assets/verticalvideo.mp4';
+import video5 from '../../assets/verticalvideo.mp4';
+import video6 from '../../assets/verticalvideo.mp4';
 
 const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      video: {video},
+      video: video1,
     },
     {
       id: 2,
-      video:  {video},
+      video: video2,
     },
     {
       id: 3,
-      video:  {video},
+      video: video3,
     },
     {
       id: 4,
-      video:  {video},
+      video: video4,
     },
     {
       id: 5,
-      video: "../../assets/vertical video.mp4",
+      video: video5,
     },
     {
       id: 6,
-      video: "../../assets/vertical video.mp4",
+      video: video6,
     }
   ];
 
@@ -49,41 +57,65 @@ const Testimonials = () => {
         {/* Video Swiper with Pagination */}
         <div className="testimonials-video-swiper-container">
           <Swiper
-            modules={[Autoplay, Pagination]}
-            spaceBetween={20}
-            slidesPerView={1}
+            modules={[Autoplay, Pagination, EffectCoverflow]}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={3}
+            spaceBetween={30}
             loop={true}
             autoplay={{
               delay: 5000,
               disableOnInteraction: false,
             }}
-            // pagination={{
-            //   el: '.testimonials-pagination',
-            //   clickable: true,
-            // }}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
+              slideShadows: false,
+            }}
+            pagination={{
+              el: '.testimonials-pagination',
+              clickable: true,
+            }}
             breakpoints={{
-              400: {
-                slidesPerView: 1.2,
+              320: {
+                slidesPerView: 1,
                 spaceBetween: 15,
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 50,
+                  modifier: 1,
+                }
               },
               640: {
                 slidesPerView: 1.5,
                 spaceBetween: 20,
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 75,
+                  modifier: 1.5,
+                }
               },
               768: {
                 slidesPerView: 2.2,
                 spaceBetween: 25,
               },
               1024: {
-                slidesPerView: 3.2,
+                slidesPerView: 3,
                 spaceBetween: 30,
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 2.5,
+                }
               },
               1280: {
-                slidesPerView: 3.5,
-                spaceBetween: 35,
-              },
-              1536: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 40,
               }
             }}
@@ -98,6 +130,7 @@ const Testimonials = () => {
                     muted
                     loop
                     playsInline
+                    preload="auto"
                   >
                     <source src={testimonial.video} type="video/mp4" />
                     Your browser does not support the video tag.
