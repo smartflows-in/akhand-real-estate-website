@@ -45,7 +45,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="testimonials-section">
+    <section id="gallery" className="testimonials-section">
       <div className="testimonials-container">
         {/* Section Header */}
         <div className="testimonials-header">

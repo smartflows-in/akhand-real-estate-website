@@ -30,7 +30,7 @@ const Configurations = () => {
   ];
 
   return (
-    <section className="configurations-section">
+    <section   id="configuration"  className="configurations-section">
       <div className="configurations-container">
         {/* Header */}
         <div className="configurations-header">

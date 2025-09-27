@@ -1,10 +1,11 @@
-/* Reset and Base Styles */
+/* Reset default browser styles for consistent rendering */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base styling for the body element */
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -13,28 +14,23 @@ body {
   overflow-x: hidden;
 }
 
+/* Typography for headings using a serif font */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
 }
 
-/* Smooth Scrolling */
+/* Enable smooth scrolling for anchor navigation */
 html {
   scroll-behavior: smooth;
 }
 
-/* Container for main content */
+/* Main application container styling */
 .app-container {
   min-height: 100vh;
 }
 
-/* Main content area */
-.main-content {
-  margin-top: 80px; /* Adjust based on navbar height */
-  min-height: calc(100vh - 80px);
-}
-
-/* Utility Classes */
+/* Utility classes for consistent theming */
 .text-gold {
   color: #D4AF37;
 }
@@ -51,7 +47,7 @@ html {
   background-color: #181D24;
 }
 
-/* Responsive Typography */
+/* Responsive typography for headings */
 h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
@@ -70,7 +66,7 @@ h3 {
   line-height: 1.4;
 }
 
-/* Button Base Styles */
+/* Base button styles for reusability */
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -85,6 +81,7 @@ h3 {
   letter-spacing: 0.5px;
 }
 
+/* Primary button styles with hover effects */
 .btn-primary {
   background: linear-gradient(135deg, #181D24 0%, #2D3748 100%);
   color: white;
@@ -95,7 +92,7 @@ h3 {
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
 }
 
-/* Section Spacing */
+/* Section padding for consistent spacing */
 .section {
   padding: 5rem 0;
 }
@@ -104,14 +101,14 @@ h3 {
   padding: 3rem 0;
 }
 
-/* Container */
+/* Centered container with max-width for content */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Responsive Container */
+/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
   .container {
     padding: 0 1.5rem;
@@ -130,14 +127,9 @@ h3 {
   .container {
     padding: 0 1rem;
   }
-  
-  .main-content {
-    margin-top: 70px;
-    min-height: calc(100vh - 70px);
-  }
 }
 
-/* Loading Animation */
+/* Animation for fade-in-up effect */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -151,53 +143,4 @@ h3 {
 
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Add this to your existing App.css */
-.main-content {
-  margin-top: 80px;
-  min-height: calc(100vh - 80px);
-}
-
-@media screen and (max-width: 768px) {
-  .main-content {
-    margin-top: 70px;
-    margin-bottom: 70px; /* Space for bottom actions */
-    min-height: calc(100vh - 140px); /* Adjust for top nav + bottom actions */
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Add this to your existing App.css */
-.main-content {
-  margin-top: 0; /* Remove top margin since hero handles it */
-}
-
-/* Ensure smooth scrolling for the entire app */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
 }
