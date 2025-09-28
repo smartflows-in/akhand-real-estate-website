@@ -68,6 +68,7 @@
 }
 
 .amenity-content {
+  justify-content: space-between;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -244,4 +245,31 @@
 
 .amenity-card-premium:nth-child(even) {
   animation-delay: 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+.amenity-svg-icon {
+position: absolute;
+  
+    height: 40px;
+    display: inline-block;
+}
+
+.icons-amenity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  .amenity-svg-icon{
+    height: 30px;
+  }
 }

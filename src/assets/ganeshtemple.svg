@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Temple Dome/Shikhara -->
+  <path d="M32 10L40 18H24L32 10Z" fill="#D4AF37"/>
+  <!-- Temple Base Structure -->
+  <path d="M20 18V38H44V18H20Z" fill="#D4AF37"/>
+  <!-- Temple Steps -->
+  <rect x="22" y="38" width="20" height="3" fill="#D4AF37"/>
+  <rect x="24" y="41" width="16" height="3" fill="#D4AF37"/>
+  <!-- Central Door/Entrance -->
+  <rect x="28" y="24" width="8" height="14" fill="#B8860B"/>
+  <!-- Door Decoration -->
+  <circle cx="32" cy="30" r="2" fill="#D4AF37"/>
+  <!-- Side Pillars/Windows -->
+  <rect x="22" y="24" width="4" height="10" fill="#B8860B"/>
+  <rect x="38" y="24" width="4" height="10" fill="#B8860B"/>
+</svg>
