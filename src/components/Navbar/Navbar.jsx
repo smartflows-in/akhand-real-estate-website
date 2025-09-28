@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import whatsappicon from '../../assets/whatsappicon.svg'
+import msgicon from '../../assets/msgicon.svg'
+import callicon from '../../assets/callicon.svg'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,9 +38,9 @@ const Navbar = () => {
   ];
 
   const bottomActions = [
-    { label: 'Call Us', icon: '📞', action: 'tel:+1234567890' },
-    { label: 'Enquiry Now', icon: '💬', action: '#enquiry' },
-    { label: 'WhatsApp', icon: '💚', action: 'https://wa.me/1234567890' }
+    { label: 'Call Us', icon: callicon, action: 'tel:+1234567890' },
+    { label: 'Enquiry Now', icon: msgicon, action: '#enquiry' },
+    { label: 'WhatsApp', icon: whatsappicon, action: 'https://wa.me/1234567890' }
   ];
 
   return (
@@ -93,7 +97,7 @@ const Navbar = () => {
               href={action.action} 
               className="bottom-action-btn"
             >
-              <span className="action-icon">{action.icon}</span>
+              <img src={action.icon} className="action-icon" alt="" />
               <span className="action-label">{action.label}</span>
             </a>
           ))}

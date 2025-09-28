@@ -3,6 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, EffectFade } from 'swiper/modules';
 import './Hero.css';
 
+
+
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
