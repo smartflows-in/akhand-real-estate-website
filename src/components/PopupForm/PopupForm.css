@@ -14,6 +14,7 @@
 }
 
 .popup-container {
+  height: 97vh;
   position: relative;
   width: 90%;
   max-width: 900px;
