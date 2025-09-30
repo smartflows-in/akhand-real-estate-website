@@ -92,6 +92,7 @@ const Contact = () => {
                 <span className="contact-btn-text">Get Project Details</span>
                 <div className="contact-btn-overlay"></div>
               </button>
+              <br /><br />
             </form>
 
          
@@ -105,6 +106,7 @@ const Contact = () => {
                 <p className="contact-info-text">
                   For more details visit the website:
                 </p>
+                
                 <a 
                   href="https://maharera.mahaonline.gov.in" 
                   target="_blank" 
