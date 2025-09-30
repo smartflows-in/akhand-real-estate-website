@@ -14,7 +14,7 @@
 }
 
 .popup-container {
-  height: 83.5vh;
+
   /* overflow-y: scroll; */
   position: relative;
   width: 90%;
@@ -295,7 +295,8 @@ color: black;
 
 @media screen and (max-width: 768px) {
   .popup-container {
-    height: 85vh;
+    
+    height: 73vh;
     width: 95%;
     max-width: 400px;
   }
@@ -309,6 +310,7 @@ color: black;
   }
   
   .popup-form-section {
+    border-radius: 25px;
     overflow-y: scroll;
     height: 82vh;
     padding: 2rem 1.5rem;
@@ -326,6 +328,7 @@ color: black;
 
 @media screen and (max-width: 480px) {
   .popup-form-section {
+    height: 75vh;
     padding: 1.5rem 1rem;
   }
   
