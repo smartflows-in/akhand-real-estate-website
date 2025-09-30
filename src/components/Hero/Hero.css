@@ -273,6 +273,10 @@
 }
 
 @media screen and (max-width: 480px) {
+.navbarlogo-img{
+  width: 35vw;
+}
+
   .hero-section {
     height: 60vh;
   }
