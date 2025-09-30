@@ -14,7 +14,7 @@
 }
 
 .popup-container {
-  height: 85vh;
+  height: 97vh;
   overflow-y: scroll;
   position: relative;
   width: 90%;
@@ -32,12 +32,11 @@
   right: 20px;
   height: 7vh;
   width: 2vw;
+background-color: white;
+color: black;
+                                                                                                                                                                                                                      
 
 
-  background: #181D24;
-  border: none;
-  border-radius: 50%;
-  color: #FFFFFF;
   font-size: 24px;
   cursor: pointer;
   z-index: 10;
@@ -48,7 +47,7 @@
 }
 
 .popup-close-btn:hover {
-  background: #D4AF37;
+
   transform: scale(1.1);
 }
 
@@ -296,6 +295,7 @@
 
 @media screen and (max-width: 768px) {
   .popup-container {
+    height: 85vh;
     width: 95%;
     max-width: 400px;
   }
