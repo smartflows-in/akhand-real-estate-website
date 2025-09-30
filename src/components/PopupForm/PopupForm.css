@@ -328,7 +328,7 @@ color: black;
 
 @media screen and (max-width: 480px) {
   .popup-form-section {
-    height: 75vh;
+    height: 80vh;
     padding: 1.5rem 1rem;
   }
   
