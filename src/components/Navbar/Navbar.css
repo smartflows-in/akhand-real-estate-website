@@ -270,6 +270,7 @@
 @media screen and (min-width: 769px) {
   .mobile-fixed-brochure,
   .mobile-bottom-actions {
+
     display: none;
   }
 }
@@ -325,6 +326,7 @@
   /* Show mobile fixed elements */
   .mobile-fixed-brochure,
   .mobile-bottom-actions {
+    margin-top: 15vh;
     display: flex;
   }
 
