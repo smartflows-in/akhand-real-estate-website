@@ -77,13 +77,25 @@ const Location = () => {
   return (
     <section id="location" className="location-section">
       <div className="location-container">
+        
         <div className="location-header">
           <h2 className="location-title">
             Techton Akhand at <span className="text-gold">Vasai East</span>
           </h2>
+                    <div className="description-section">
+              <h3 className="description-title">
+                <span className="title-gradient">Vasai's Future Ready Homes</span>
+              </h3>
+              <p className="description-text">
+                With 8+ upcoming infrastructures, Vasai East is on the brink of rapid growth. 
+                Offering world-class schools, colleges, healthcare, and seamless connectivity, 
+                it stands as a prime destination-perfect for both living and smart investment.
+              </p>
+            </div>  
         </div>
 
         <div className="location-content">
+          
           {/* Left Side - Map */}
           <div className="map-container">
             {/* Selected Location Info - Now on top of map */}
@@ -121,16 +133,7 @@ const Location = () => {
           {/* Right Side - Content */}
           <div className="content-container">
             {/* Description Section */}
-            <div className="description-section">
-              <h3 className="description-title">
-                <span className="title-gradient">Vasai's Future Ready Homes</span>
-              </h3>
-              <p className="description-text">
-                With 8+ upcoming infrastructures, Vasai East is on the brink of rapid growth. 
-                Offering world-class schools, colleges, healthcare, and seamless connectivity, 
-                it stands as a prime destination-perfect for both living and smart investment.
-              </p>
-            </div>
+  
 
             {/* Dropdowns Section - All in one box */}
             <div className="dropdowns-main-box">

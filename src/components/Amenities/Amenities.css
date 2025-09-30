@@ -270,7 +270,7 @@ position: absolute;
 }
 @media screen and (max-width: 480px) {
   .amenity-svg-icon{
-    margin-right: 20vw;
+    margin-right: 10vw;
     height: 30px;
   }
 }

@@ -63,7 +63,7 @@ const Amenities = () => {
         </div>
         <div className="view-more-premium">
           <button className="view-more-btn-premium">
-            ......View 30+ Amenities
+            View All 30+ Amenities
             <span className="btn-glow"></span>
           </button>
         </div>
