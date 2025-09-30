@@ -74,6 +74,19 @@ const Contact = () => {
                 />
                 <div className="contact-input-underline"></div>
               </div>
+                   <div className="popup-checkbox-group">
+                <label className="popup-checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="updates"
+                    checked={formData.updates}
+                    onChange={handleChange}
+                    className="popup-checkbox"
+                  />
+                  <span className="popup-checkbox-custom"></span>
+                  By submitting an enquiry, I authorize Techton Lifespaces to contact me via Call, SMS, WhatsApp, Emailer or any other relevant medium
+                </label>
+              </div>
 
               <button type="submit" className="contact-submit-btn">
                 <span className="contact-btn-text">Get Project Details</span>
@@ -81,12 +94,7 @@ const Contact = () => {
               </button>
             </form>
 
-            <div className="contact-disclaimer">
-              <p>
-                By submitting an enquiry, I authorize Techton Lifespaces to contact me 
-                via Call, SMS, WhatsApp, Emailer or any other relevant medium.
-              </p>
-            </div>
+         
           </div>
 
           <div className="contact-info">

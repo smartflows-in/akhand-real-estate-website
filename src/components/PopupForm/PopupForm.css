@@ -14,7 +14,7 @@
 }
 
 .popup-container {
-  height: 97vh;
+  height: 85vh;
   overflow-y: scroll;
   position: relative;
   width: 90%;
@@ -315,7 +315,7 @@
   }
   
   .popup-pricing {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5rem;
   }
   
@@ -334,6 +334,6 @@
   }
   
   .popup-price {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 }
