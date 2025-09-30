@@ -23,16 +23,16 @@ const Amenities = () => {
     { name: 'Reflexology Path', icon: ReflexologyPath },
     { name: 'Guest Room', icon: GuestRoom },
     { name: 'Library', icon: Library },
-    { name: 'Wellness Lawn', icon: '' },
+
     { name: 'Cove seating', icon: Coveseating },
     { name: 'Pool With Jacuzzi', icon: PoolWithJacuzzi },
     { name: 'Net Cricket (4 x 25 mt)', icon: CricketNet },
     { name: 'Open Cafe', icon: OpenCafe },
     { name: 'Kids Play Area', icon: KidsPlayArea },
     { name: 'Experiential Walk', icon: ExperientialWalk },
-    { name: 'Amphi seating on mound', icon: '' },
+
     { name: 'Elevated Jogging Track', icon: JoggingTrack },
-    { name: 'Event lawn', icon: '' },
+
     { name: 'BBQ Plaza', icon: BBQPlaza }
   ];
 
