@@ -38,6 +38,13 @@ const About = () => {
               about family, togetherness, and creating a community where happiness, comfort, and
               belonging naturally come alive.
             </p>
+                   {/* CTA Section */}
+        <div className="about-cta">
+          <button className="brochure-download-btn">
+            <span className="btn-icon">📥</span>
+            Download Brochure
+          </button>
+        </div>
           </div>
 
           {/* Features Grid */}
@@ -51,13 +58,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="about-cta">
-          <button className="brochure-download-btn">
-            <span className="btn-icon">📥</span>
-            Download Brochure
-          </button>
-        </div>
+ 
       </div>
     </section>
   );

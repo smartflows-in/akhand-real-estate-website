@@ -2,9 +2,10 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, EffectFade } from 'swiper/modules';
 import './Hero.css';
-
-
-
+import Hero1 from '../../assets/Heroimg_1.jpg'
+import Hero2 from '../../assets/Heroimg_2.jpg'
+import Hero3 from '../../assets/Heroimg_3.jpg'
+import Hero4 from '../../assets/Heroimg_4.jpg'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -16,13 +17,13 @@ const Hero = () => {
   // Custom SVG Arrow Components
   const LeftArrow = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 
   const RightArrow = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 
@@ -30,32 +31,32 @@ const Hero = () => {
   const heroImages = [
     {
       id: 1,
-      image: '/assets/images/hero1.jpg',
+      image: Hero1,
       title: 'Luxury Living Redefined',
       subtitle: 'Experience unparalleled elegance and sophistication'
     },
     {
       id: 2,
-      image: '/assets/images/hero2.jpg',
+      image: Hero2,
       title: 'Premium Residences',
       subtitle: 'Where luxury meets contemporary design'
     },
     {
       id: 3,
-      image: '/assets/images/hero3.jpg',
+      image: Hero3,
       title: 'Exclusive Lifestyle',
       subtitle: 'Discover your dream home in paradise'
     },
     {
       id: 4,
-      image: '/assets/images/hero4.jpg',
+      image: Hero4,
       title: 'Architectural Marvel',
       subtitle: 'Masterpiece of modern architecture'
     }
   ];
 
   return (
-    <section className="hero-section">
+    <section id="Home" className="hero-section">
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
         effect="fade"
@@ -77,9 +78,9 @@ const Hero = () => {
       >
         {heroImages.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div 
+            <div
               className="hero-slide"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              style={{ backgroundImage: `url(${slide.image})` }} // Fixed this line
             >
               <div className="hero-slide-overlay"></div>
               <div className="hero-slide-content">

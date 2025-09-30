@@ -21,6 +21,12 @@
 }
 
 /* Logo */
+.navbarlogo-img{
+  width: 15vw;
+  cursor: pointer;
+}
+
+
 .nav-logo .logo-text {
   font-size: 2rem;
   font-weight: 700;
@@ -29,6 +35,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 2px;
+
 }
 
 /* Navigation Menu */

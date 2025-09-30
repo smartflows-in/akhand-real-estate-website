@@ -3,7 +3,7 @@ import './Navbar.css';
 import whatsappicon from '../../assets/whatsappicon.svg'
 import msgicon from '../../assets/msgicon.svg'
 import callicon from '../../assets/callicon.svg'
-
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +49,7 @@ const Navbar = () => {
         <div className="nav-container">
           {/* Logo */}
           <div className="nav-logo">
-            <span className="logo-text">Akhand</span>
+            <span className="logo-text"><a href="#Home"><img  className='navbarlogo-img'   src={logo} alt="" /></a></span>
           </div>
 
           {/* Navigation Items */}
